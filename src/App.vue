@@ -1,18 +1,30 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
+import ButtonWorld from './components/ButtonWorld.vue';
 
 </script>
 
 <template>
+      <nav>
+        <p>Home</p>
+      <router-link to="/about" >About</router-link>
+      <router-link to="/contact" >Contact</router-link>
+   
+    </nav>
   <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+
+ <!-- <ButtonWorld text="Login" secondProps="Manish" :arrayOfNumbers="[1,2,3]" /> -->
+ <!-- <ButtonWorld text="Login" secondProps="Manish"  /> -->
+ <!-- <ButtonWorld text="Register" secondProps="abc" />
+ <ButtonWorld  /> -->
+ <router-view />
+ <footer>
+      <p>This is footer</p>
+
+    </footer>
+  
   </div>
-  <HelloWorld  />
+  <!-- <HelloWorld  /> -->
 </template>
 
 <style scoped>
